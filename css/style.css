@@ -572,12 +572,12 @@ blockquote {
 
 /*============ 3. Layout ============*/
 
-.header-main {
+.header-main { 
   position: fixed;
   top: 0;
   height: 100%;
   z-index: 300;
-  width: 200px;
+  width: 250px;
   background-color: #17181b;
   overflow: auto;
   left: 0;
