@@ -495,10 +495,13 @@
                     <div class="section-container">
 
                         <!--Page Heading-->
+                        
                         <div class="page-heading">
                             <span class="icon"><i class="lnr lnr-envelope"></i></span>
                             <h2>Contact Me.</h2>
                         </div>
+                            
+                        
 
                         <!--Form Row-->
                         <div class="row mb-70">
@@ -506,7 +509,11 @@
                                 <div class="subheading">
                                     <h3>Let's Talk</h3>
                                 </div>
-
+                               <div class="contact-alert-wrapper">
+                                <div id="contact-alert" class="alert alert-success contact-alert wave-in">
+                                    <i class='fas fa-check'></i> Successfully Sent your message
+                                </div>
+                               </div>
                                 <!--Form Start-->
                                 <form id="contact-form">
                                     <div class="row">
@@ -531,14 +538,16 @@
                                         <!--Message Box-->
                                         <div class="col-md-12 mb-30">
                                             <span class="input">
-                                                <textarea  class="input__field cf-validate" id="cf-message" name="message" rows="5" ></textarea>
+                                                <textarea class="input__field cf-validate" id="cf-message" name="message" rows="5" ></textarea>
                                                 <label class="input__label" for="cf-message" aria-required="">How can we help you?</label>
                                             </span>
                                         </div>
 
                                         <!--Submit Button-->
                                         <div class="col-md-12 text-center">
-                                            <button class="btn-main">Send Message</button>
+                                            <button class="btn-main" id="send-button">
+                                                Send Message
+                                            </button>
                                         </div>
 
 

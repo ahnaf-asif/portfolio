@@ -1592,3 +1592,48 @@ a {
     border: none;
   }
 }
+
+
+.page-heading-wrapper{
+  /* position: relative; */
+}
+.contact-alert{
+  /* position: initial; */
+  display: none;
+  /* opacity: 0; */
+  background: none;
+  max-width: 350px;
+  margin: 0 auto;
+  
+  color: limegreen;
+  border-color: limegreen;
+
+  text-align: center;
+}
+.contact-alert-wrapper{
+  margin-bottom: 35px;
+}
+
+.wave-in{
+  animation: waveIn 2s ease-in-out forwards;
+}
+.wave-out{
+  animation: waveOut 2s ease-in-out forwards;
+}
+
+@keyframes waveIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes waveOut {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}

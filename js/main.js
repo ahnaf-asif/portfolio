@@ -235,6 +235,26 @@ function handleForm(event) {
   let name = document.getElementById("cf-name").value;
   let email = document.getElementById("cf-email").value;
   let message = document.getElementById("cf-message").value;
+  const contactAlert = document.getElementById('contact-alert');
+  document.getElementById('send-button').innerText = 'Sending...';
+  // console.log('length = ' + message.length);
+  if(message.length > 1000){
+      contactAlert.innerHTML = "<i class='far fa-times-circle'></i> The message is too long";
+      
+      // document.getElementById('contact-alert').addClass('wave-in');
+      contactAlert.style.color='yellow';
+      contactAlert.style.borderColor='yellow';
+      contactAlert.style.display='block';
+
+      setTimeout(()=>{
+        contactAlert.style.animation='waveOut 3s ease-in-out forwards';
+        setTimeout(()=>{
+          contactAlert.style.display='none';
+        }, 3000);
+      }, 3000);
+      document.getElementById('send-button').innerText = 'Send Message';
+      return;
+  }
 
   let data = {
     name: name,
@@ -251,11 +271,28 @@ function handleForm(event) {
     method: "POST",
     body: JSON.stringify(data),
   }).then((res) => {
+    
     // Checking if 200 Status
     if (res.status == 200) {
-      alert("Message Sent Succesfully :)");
+      //alert("Message Sent Succesfully");
+      document.getElementById('contact-alert').innerHTML = "<i class='fas fa-check'></i> Successfully Sent your message";
+      document.getElementById('send-button').innerText = 'Sent';
+      // document.getElementById('contact-alert').addClass('wave-in');
+      contactAlert.style.color='limegreen';
+      contactAlert.style.borderColor='limegreen';
+      document.getElementById('contact-alert').style.display='block';
+
+      setTimeout(()=>{
+        contactAlert.style.animation='waveOut 3s ease-in-out forwards';
+        
+        setTimeout(()=>{
+          contactAlert.style.display='none';
+          document.getElementById('send-button').innerText = 'Send Message';
+        }, 3000);
+      }, 3000);
+
     } else {
-      alert("Sorry Message Not Sent :(");
+      alert('error occured');
     }
   });
 }
