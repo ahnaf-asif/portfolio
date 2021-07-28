@@ -1,0 +1,64 @@
+:root{
+  --main_color : #00A3E1;
+}
+
+.header-main .image-container .header-name:before {
+  background-color: var(--main_color); }
+
+.page-heading h2 {
+  color: var(--main_color); }
+
+.page-heading .icon {
+  color: var(--main_color); }
+
+.subheading h3 {
+  border-color: var(--main_color) !important; }
+  .subheading h3:before, .subheading h3:after {
+    background-color: var(--main_color); }
+
+.banner-section h1 span {
+  color: var(--main_color); }
+
+.banner-section p .cd-words-wrapper b {
+  border-color: var(--main_color) !important; }
+
+.about-info ul li span.title {
+  border-color: var(--main_color) !important; }
+
+.btn-main {
+  border-color: var(--main_color) !important;
+  color: var(--main_color); }
+  .btn-main:after {
+    background-color: var(--main_color); }
+
+.services .service-item .icon {
+  color: var(--main_color) !important; }
+
+ul.experience li span.line-left, ul.education li span.line-left {
+  background-color: var(--main_color) !important; }
+  ul.experience li span.line-left:before, ul.experience li span.line-left:after, ul.education li span.line-left:before, ul.education li span.line-left:after {
+    border-color: var(--main_color) !important; }
+
+ul.experience .content h5, ul.education .content h5 {
+  color: var(--main_color); }
+
+.progress .progress-bar {
+  background-color: var(--main_color); }
+  .progress .progress-bar:after {
+    border-bottom-color: #0089bd; }
+
+.portfolio-section .portfolio-filter ul li.active {
+  background-color: var(--main_color); }
+
+.portfolio-section .item figure:before {
+  background-color: var(--main_color); }
+
+
+.blog-section .blog-item .blog-content .cat {
+  color: var(--main_color); }
+
+.contact-info .info-item .icon {
+  color: var(--main_color); }
+
+.blog-page .blog-heading .cat {
+  color: var(--main_color); }
