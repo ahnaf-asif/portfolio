@@ -13,7 +13,7 @@ async function PortfolioView() {
 
   // Fetcing Data from specified url with id
   await fetch(
-    `https://ahnafasif.bosonbiggansangho.com/api/individual-portfolio/${postID.searchParams.get("id")}`)
+    `https://ahnafasif.bosonscienceclub.com/api/individual-portfolio/${postID.searchParams.get("id")}`)
     .then((response) => response.json())
     .then((blog) => {
 

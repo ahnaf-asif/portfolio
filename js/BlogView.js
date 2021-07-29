@@ -13,7 +13,7 @@ async function ViewBlog() {
 
   // Fetcing Data from specified url with id
   await fetch(
-    `https://ahnafasif.bosonbiggansangho.com/api/individual-blog/${postID.searchParams.get("id")}`)
+    `https://ahnafasif.bosonscienceclub.com/api/individual-blog/${postID.searchParams.get("id")}`)
     .then((response) => response.json())
     .then((blog) => {
 

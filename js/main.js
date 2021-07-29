@@ -263,7 +263,7 @@ function handleForm(event) {
   };
 
   // POST Request for contact
-  fetch("https://ahnafasif.bosonbiggansangho.com/api/contact", {
+  fetch("https://ahnafasif.bosonscienceclub.com/api/contact", {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -305,8 +305,8 @@ form.addEventListener("submit", handleForm);
 /*======== Checking if blog page or not ========*/
 
 if (window.location.pathname != "/blog.html") {
-  BlogPaginate("https://ahnafasif.bosonbiggansangho.com/api/blogs/9?page=1")
+  BlogPaginate("https://ahnafasif.bosonscienceclub.com/api/blogs/9?page=1")
   PortfolioPaginate(
-    "https://ahnafasif.bosonbiggansangho.com/api/portfolios/9?page=1"
+    "https://ahnafasif.bosonscienceclub.com/api/portfolios/9?page=1"
   );
 }
