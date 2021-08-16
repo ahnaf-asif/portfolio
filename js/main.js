@@ -58,7 +58,20 @@ async function BlogPaginate(PageUrl) {
     .querySelector(".blogs-masonry")
     .insertAdjacentHTML(
       "afterbegin",
-      `<h1 id="loading-blog" style="text-align: center; margin: auto; display: flex; align-items: center; justify-content: center;">Loading Blog .....</h1>`
+      
+      ` 
+        <div style="
+            height: 80vh;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          " id="loading-blog">
+          <i style="font-size : 150px;" class="fas fa-spinner fa-pulse"></i>
+        </div>
+
+      `
     );
 
   // Fetching Blog Page
@@ -70,40 +83,40 @@ async function BlogPaginate(PageUrl) {
       document.querySelector(".blog_pagination").innerHTML = "";
 
       // Checking is next page url is null or not
-      if (result.next_page_url == null) {
-        // If null then add disabled classname
-        document
-          .querySelector(".blog_pagination")
-          .insertAdjacentHTML(
-            "afterbegin",
-            `<li onclick="BlogPaginate('${result.next_page_url}')" class="page-item disabled"><a class="page-link" href="#">Next &raquo;</a></li>`
-          );
-      } else {
-        document
-          .querySelector(".blog_pagination")
-          .insertAdjacentHTML(
-            "afterbegin",
-            `<li onclick="BlogPaginate('${result.next_page_url}')" class="page-item active"><a class="page-link" href="#">Next &raquo;</a></li>`
-          );
-      }
+      // if (result.next_page_url == null) {
+      //   // If null then add disabled classname
+      //   document
+      //     .querySelector(".blog_pagination")
+      //     .insertAdjacentHTML(
+      //       "afterbegin",
+      //       `<li onclick="BlogPaginate('${result.next_page_url}')" class="page-item disabled"><a class="page-link" href="#">Next &raquo;</a></li>`
+      //     );
+      // } else {
+      //   document
+      //     .querySelector(".blog_pagination")
+      //     .insertAdjacentHTML(
+      //       "afterbegin",
+      //       `<li onclick="BlogPaginate('${result.next_page_url}')" class="page-item active"><a class="page-link" href="#">Next &raquo;</a></li>`
+      //     );
+      // }
 
-      // Checking is prev page url is null or not
-      if (result.prev_page_url == null) {
-        // If null then add disabled classname
-        document
-          .querySelector(".blog_pagination")
-          .insertAdjacentHTML(
-            "afterbegin",
-            `<li onclick="BlogPaginate('${result.prev_page_url}')" class="page-item disabled mr-1"><a class="page-link" href="#">&laquo; Previous</a></li>`
-          );
-      } else {
-        document
-          .querySelector(".blog_pagination")
-          .insertAdjacentHTML(
-            "afterbegin",
-            `<li onclick="BlogPaginate('${result.prev_page_url}')" class="page-item active mr-1"><a class="page-link" href="#">&laquo; Previous</a></li>`
-          );
-      }
+      // // Checking is prev page url is null or not
+      // if (result.prev_page_url == null) {
+      //   // If null then add disabled classname
+      //   document
+      //     .querySelector(".blog_pagination")
+      //     .insertAdjacentHTML(
+      //       "afterbegin",
+      //       `<li onclick="BlogPaginate('${result.prev_page_url}')" class="page-item disabled mr-1"><a class="page-link" href="#">&laquo; Previous</a></li>`
+      //     );
+      // } else {
+      //   document
+      //     .querySelector(".blog_pagination")
+      //     .insertAdjacentHTML(
+      //       "afterbegin",
+      //       `<li onclick="BlogPaginate('${result.prev_page_url}')" class="page-item active mr-1"><a class="page-link" href="#">&laquo; Previous</a></li>`
+      //     );
+      // }
 
       addBlog(result.data)
 
@@ -150,7 +163,20 @@ async function PortfolioPaginate(PageUrl) {
     .querySelector(".portfolio-items")
     .insertAdjacentHTML(
       "afterbegin",
-      `<h1 id="loading-portfolio" style="text-align: center; margin: auto; display: flex; align-items: center; justify-content: center;">Loading Portfolio .....</h1>`
+      
+      ` 
+        <div style="
+            height: 80vh;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          " id="loading-portfolio">
+          <i style="font-size : 150px;" class="fas fa-spinner fa-pulse"></i>
+        </div>
+
+      `
     );
 
   // Fetching Portfolio Page
@@ -162,40 +188,40 @@ async function PortfolioPaginate(PageUrl) {
       document.querySelector(".portfolio_pagination").innerHTML = "";
 
       // Checking is next page url is null or not
-      if (result.next_page_url == null) {
-        // If null then add disabled classname
-        document
-          .querySelector(".portfolio_pagination")
-          .insertAdjacentHTML(
-            "afterbegin",
-            `<li onclick="PortfolioPaginate('${result.next_page_url}')" class="page-item disabled"><a class="page-link" href="#">Next &raquo;</a></li>`
-          );
-      } else {
-        document
-          .querySelector(".portfolio_pagination")
-          .insertAdjacentHTML(
-            "afterbegin",
-            `<li onclick="PortfolioPaginate('${result.next_page_url}')" class="page-item active"><a class="page-link" href="#">Next &raquo;</a></li>`
-          );
-      }
+      // if (result.next_page_url == null) {
+      //   // If null then add disabled classname
+      //   document
+      //     .querySelector(".portfolio_pagination")
+      //     .insertAdjacentHTML(
+      //       "afterbegin",
+      //       `<li onclick="PortfolioPaginate('${result.next_page_url}')" class="page-item disabled"><a class="page-link" href="#">Next &raquo;</a></li>`
+      //     );
+      // } else {
+      //   document
+      //     .querySelector(".portfolio_pagination")
+      //     .insertAdjacentHTML(
+      //       "afterbegin",
+      //       `<li onclick="PortfolioPaginate('${result.next_page_url}')" class="page-item active"><a class="page-link" href="#">Next &raquo;</a></li>`
+      //     );
+      // }
 
-      // Checking is prev page url is null or not
-      if (result.prev_page_url == null) {
-        // If null then add disabled classname
-        document
-          .querySelector(".portfolio_pagination")
-          .insertAdjacentHTML(
-            "afterbegin",
-            `<li onclick="PortfolioPaginate('${result.prev_page_url}')" class="page-item disabled mr-1"><a class="page-link" href="#">&laquo; Previous</a></li>`
-          );
-      } else {
-        document
-          .querySelector(".portfolio_pagination")
-          .insertAdjacentHTML(
-            "afterbegin",
-            `<li onclick="PortfolioPaginate('${result.prev_page_url}')" class="page-item active mr-1"><a class="page-link" href="#">&laquo; Previous</a></li>`
-          );
-      }
+      // // Checking is prev page url is null or not
+      // if (result.prev_page_url == null) {
+      //   // If null then add disabled classname
+      //   document
+      //     .querySelector(".portfolio_pagination")
+      //     .insertAdjacentHTML(
+      //       "afterbegin",
+      //       `<li onclick="PortfolioPaginate('${result.prev_page_url}')" class="page-item disabled mr-1"><a class="page-link" href="#">&laquo; Previous</a></li>`
+      //     );
+      // } else {
+      //   document
+      //     .querySelector(".portfolio_pagination")
+      //     .insertAdjacentHTML(
+      //       "afterbegin",
+      //       `<li onclick="PortfolioPaginate('${result.prev_page_url}')" class="page-item active mr-1"><a class="page-link" href="#">&laquo; Previous</a></li>`
+      //     );
+      // }
 
       addPortfolio(result.data)
     });
@@ -305,8 +331,8 @@ form.addEventListener("submit", handleForm);
 /*======== Checking if blog page or not ========*/
 
 if (window.location.pathname != "/blog.html") {
-  BlogPaginate("https://ahnafasif.bosonscienceclub.com/api/blogs/9?page=1")
+  BlogPaginate("https://ahnafasif.bosonscienceclub.com/api/blogs/30")
   PortfolioPaginate(
-    "https://ahnafasif.bosonscienceclub.com/api/portfolios/9?page=1"
+    "https://ahnafasif.bosonscienceclub.com/api/portfolios/30"
   );
 }

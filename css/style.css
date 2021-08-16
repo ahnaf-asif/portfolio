@@ -1637,3 +1637,11 @@ a {
     opacity: 0;
   }
 }
+
+.portfolio-cover-image{
+  overflow: hidden !important;
+}
+.portfolio-cover-image > img{
+  width: 100% !important;
+  height: auto !important;
+}

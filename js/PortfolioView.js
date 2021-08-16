@@ -8,7 +8,19 @@ async function PortfolioView() {
     .querySelector(".portfolio-page")
     .insertAdjacentHTML(
       "afterbegin",
-      `<h1 id="loading-portfolio-ind" style="text-align: center; margin: auto; display: flex; align-items: center; justify-content: center;">Loading Portfolio .....</h1>`
+    
+      ` 
+        <div style="
+            height: 80vh;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          " id="loading-portfolio-ind">
+          <i style="font-size : 150px;" class="fas fa-spinner fa-pulse"></i>
+        </div>
+
+      `
     );
 
   // Fetcing Data from specified url with id
@@ -18,14 +30,24 @@ async function PortfolioView() {
     .then((blog) => {
 
       // Checking if url status 200 or not
+      // <img src="${blog.individual_portfolio.cover_pic}" alt="Portfolio Thumbnail"/>
       if (blog.status == 200) {
 
         // Rendering Blog Data
         document.querySelector(".portfolio-page").insertAdjacentHTML(
           "afterbegin",
           `
-            <div class="blog-image portfolio-image">
-            <img src="${blog.individual_portfolio.cover_pic}" alt="Portfolio Thumbnail" width="100%" height="100%"/>
+          <div class="blog-image portfolio-image portfolio-cover-image" 
+          
+          style="
+            background-image: url('${blog.individual_portfolio.cover_pic}');
+            width: 100%;
+            height: 300px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          ">
+            
           </div>
           <div class="blog-container portfolio-container">
       

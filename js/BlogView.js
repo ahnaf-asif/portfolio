@@ -8,7 +8,21 @@ async function ViewBlog() {
     .querySelector(".blog-page")
     .insertAdjacentHTML(
       "afterbegin",
-      `<h1 id="loading-blog-ind" style="text-align: center; margin: auto; display: flex; align-items: center; justify-content: center;">Loading Blog .....</h1>`
+    
+
+      ` 
+        <div style="
+            height: 80vh;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          " id="loading-blog-ind">
+          <i style="font-size : 150px;" class="fas fa-spinner fa-pulse"></i>
+        </div>
+
+      `
+
     );
 
   // Fetcing Data from specified url with id
