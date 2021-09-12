@@ -34,10 +34,10 @@ function addBlog(BlogData) {
                 <div class="blog-content">
                     <span class="cat">${blog.category}</span>
                     <h4 class="blog-title">${blog.title}</h4>
-                    <div class="blog-date">${blog.created_at.slice(
-        0,
-        blog.created_at.indexOf("T")
-      )}</div>
+                    <div class="blog-date">${formatDate(blog.created_at.slice(
+                      0,
+                      blog.created_at.indexOf("T")
+                    ))}</div>
                 </div>
             </a>
           </div>`
@@ -335,4 +335,17 @@ if (window.location.pathname != "/blog.html") {
   PortfolioPaginate(
     "https://ahnafasif.bosonscienceclub.com/api/portfolios/30"
   );
+}
+
+function formatDate(date){
+  let months = [
+    'January','February','March','April','May','June','July','August',
+    'September','October','November','December'
+  ];
+  d = date.split('-');
+  let year = d[0];
+  let month = months[d[1]-1];
+  let day = d[2];
+
+  return `${day} ${month}, ${year}`;
 }

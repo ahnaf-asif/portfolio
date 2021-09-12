@@ -48,7 +48,7 @@ async function ViewBlog() {
         <div class="blog-heading col-md-8 offset-md-2">
             <span class="cat">${blog.individual_blog.category}</span>
             <h1>${blog.individual_blog.title}</h1>
-            <div class="blog-date">${blog.individual_blog.created_at.slice(0, blog.individual_blog.created_at.indexOf("T"))}</div>
+            <div class="blog-date">${formatDate(blog.individual_blog.created_at.slice(0, blog.individual_blog.created_at.indexOf("T")))}</div>
             
         </div>
         <!--Blog Heading Start-->
