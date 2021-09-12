@@ -51,7 +51,9 @@ ul.experience .content h5, ul.education .content h5 {
   background-color: var(--main_color); }
 
 .portfolio-section .item figure:before {
-  background-color: var(--main_color); }
+  background-color: var(--main_color); 
+  /* background-color: rgb(34, 34, 34); */
+}
 
 
 .blog-section .blog-item .blog-content .cat {

@@ -60,7 +60,7 @@ async function PortfolioView() {
 
           <div class="portfolio-details">
           <p>Project Title: <span>${blog.individual_portfolio.title}</span></p>
-          <p>Project Link: <a href="${blog.individual_portfolio.link}">${blog.individual_portfolio.link}</a></p>
+          <p>Project Link: <a target="_blank" href="${blog.individual_portfolio.link}">${blog.individual_portfolio.link}</a></p>
           </div>
       
           <!--Blog Content Start-->

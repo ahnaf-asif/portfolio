@@ -1136,7 +1136,7 @@ header .header-mobile .header-toggle i {
 }
 
 .portfolio-section .item figure:hover:before {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .portfolio-section .item figure:hover figcaption h4,
@@ -1230,7 +1230,9 @@ header .header-mobile .header-toggle i {
 }
 
 .portfolio-details {
-  background-color: #0587b9;
+  background-color: #165068;
+  /* background-color: #595959; */
+  /* background: red; */
   margin: 4rem 0;
   text-align: center;
   padding: 1rem 0;

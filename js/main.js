@@ -49,7 +49,7 @@ function addBlog(BlogData) {
 
 async function BlogPaginate(PageUrl) {
 
-  // Making Empty Portfolio Page
+  // Making Empty Portfolio Page 
   var blogsMasonry = document.querySelector(".blogs-masonry");
   blogsMasonry.innerHTML = "";
 
