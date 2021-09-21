@@ -132,10 +132,10 @@ function addPortfolio(PortfolioData) {
 
   // Mapping through Data ( Array )
   PortfolioData.map((project) => {
-
+    console.log(project)
     // Adding Item on by one
     document.querySelector(".portfolio-items").insertAdjacentHTML(
-      "afterbegin",
+      "beforeend",
       `<div class="item col-lg-4 col-sm-6">
           <a href="portfolio.html?id=${project.id}" class="blog-item">
             <figure style="background-image: url('${project.cover_pic}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
@@ -222,7 +222,7 @@ async function PortfolioPaginate(PageUrl) {
       //       `<li onclick="PortfolioPaginate('${result.prev_page_url}')" class="page-item active mr-1"><a class="page-link" href="#">&laquo; Previous</a></li>`
       //     );
       // }
-
+      console.log(result.data);
       addPortfolio(result.data)
     });
 }
