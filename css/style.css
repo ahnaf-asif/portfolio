@@ -1,5 +1,9 @@
 /*============ 1. Body and Core Css ============*/
-
+.resume-link{
+  color: lightblue !important;
+  text-decoration: underline !important;
+  
+}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -736,7 +740,8 @@ header .header-mobile .header-toggle i {
 .site-main {
   position: absolute;
   top: 0;
-  left: 200px;
+  left: 0; /* 200px */
+  z-index: 100000;
   right: 0;
   width: auto;
   height: 100%;
