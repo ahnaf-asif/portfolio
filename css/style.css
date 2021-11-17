@@ -44,6 +44,7 @@
 }
 .resume-header-right .inside {
   height: 150px;
+  width: 150px;
   width: auto;
   border-radius: 50%;
   overflow: hidden;
