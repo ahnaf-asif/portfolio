@@ -1,4 +1,17 @@
 /*============ 1. Body and Core Css ============*/
+
+.strengths{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.strength{
+  border: 2px solid #00A3E1;
+  padding: 2px 15px ;
+  border-radius: 10%;
+}
+
 .resume-link{
   color: lightblue !important;
   text-decoration: underline !important;
@@ -19,7 +32,15 @@
   font-size: 25px;
   color: #00A3E1;
 }
+.achievement .fab{
+  font-size: 25px;
+  color: #00A3E1;
+}
 
+.achievement .far{
+  font-size: 25px;
+  color: #00A3E1;
+}
 .achievement .fa-award{
   font-size: 50px;
   color: #00A3E1;
