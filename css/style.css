@@ -9,7 +9,11 @@
 .strength{
   border: 2px solid #00A3E1;
   padding: 2px 15px ;
-  border-radius: 10%;
+  border-radius: 5%;
+  cursor: pointer;
+}
+.strength:hover{
+  background: #00A3E1;
 }
 
 .resume-link{
