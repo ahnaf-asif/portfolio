@@ -821,8 +821,8 @@ header .header-mobile .header-toggle i {
   position: absolute;
   top: 0;
   left: 200px;
-  left: 0;
-  z-index: 100000;
+  /* left: 0;
+  z-index: 100000; */
   right: 0;
   width: auto;
   height: 100%;
